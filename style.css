@@ -33,25 +33,25 @@ button {
 }
 
 .btn-2 {
-  background-color: orange;
+  background-color: red;
 }
 .btn-1 {
-  background-color: orange;
+  background-color: red;
 }
 .btn-4 {
-  background-color: orange;
+  background-color: red;
 }
 .btn-3 {
-  background-color: orange;
+  background-color: red;
 }
 .btn-5 {
-  background-color: orange;
+  background-color: red;
 }
 .btn-6 {
-  background-color: orange;
+  background-color: red;
 }
 .ravno {
-  background-color: orange;
+  background-color: red;
 }
 .polevivoda {
   font-size: 50px;
@@ -69,4 +69,7 @@ button {
     margin-left: 11%;
     margin-top: 15%;
   }
+}
+.lox {
+  color: red;
 }
