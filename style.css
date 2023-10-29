@@ -56,3 +56,17 @@ button {
 .polevivoda {
   font-size: 50px;
 }
+
+@media screen and (max-width: 576px) {
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    border: 5px solid black;
+    width: 280px;
+    height: 480px;
+    margin-left: 11%;
+    margin-top: 15%;
+  }
+}
