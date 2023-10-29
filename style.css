@@ -1,0 +1,58 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  border: 5px solid black;
+  width: 280px;
+  height: 480px;
+  margin-left: 40%;
+  margin-top: 8%;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
+.polls {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+
+body {
+  font-size: 25px;
+}
+button {
+  width: 70px;
+  height: 70px;
+}
+
+.btn-2 {
+  background-color: orange;
+}
+.btn-1 {
+  background-color: orange;
+}
+.btn-4 {
+  background-color: orange;
+}
+.btn-3 {
+  background-color: orange;
+}
+.btn-5 {
+  background-color: orange;
+}
+.btn-6 {
+  background-color: orange;
+}
+.ravno {
+  background-color: orange;
+}
+.polevivoda {
+  font-size: 50px;
+}

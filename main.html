@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Калькулятор</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="block">
+      <div class="polls">
+        <div class="polevivoda"></div>
+      </div>
+      <div class="buttons">
+        <button onclick="poleavvoda(1)" class="b-1">1</button>
+        <button onclick="poleavvoda(2)" class="b-2">2</button>
+        <button onclick="poleavvoda(3)" class="b-3">3</button>
+        <button onclick="poleavvoda('+')" class="btn-2">+</button>
+
+        <button onclick="poleavvoda(4)" class="b-4">4</button>
+        <button onclick="poleavvoda(5)" class="b-5">5</button>
+        <button onclick="poleavvoda(6)" class="b-6">6</button>
+        <button onclick="poleavvoda('-')" class="btn-1">-</button>
+
+        <button onclick="poleavvoda(7)" class="b-7">7</button>
+        <button onclick="poleavvoda(8)" class="b-8">8</button>
+        <button onclick="poleavvoda(9)" class="b-9">9</button>
+        <button onclick="poleavvoda('=')" class="ravno">=</button>
+
+        <button onclick="poleavvoda(0)" class="b-0">0</button>
+
+        <button onclick="poleavvoda('AC')" class="btn-5">AC</button>
+        <button onclick="poleavvoda('/')" class="btn-3">/</button>
+        <button onclick="poleavvoda('*')" class="btn-4">*</button>
+      </div>
+    </div>
+    <script>
+      let prepenanie;
+      function poleavvoda(operation) {
+        let pole = document.querySelector(".polevivoda");
+        if (typeof operation === "number") {
+          console.log("это число");
+          pole.innerHTML += operation;
+        } else if (operation === "AC") {
+          console.log("удалить");
+          pole.innerHTML = "";
+        } else if (operation === "*") {
+          pole.innerHTML += operation;
+          console.log("умножить");
+          prepenanie = operation;
+        } else if (operation === "/") {
+          console.log("разделить");
+          pole.innerHTML += operation;
+          prepenanie = operation;
+        } else if (operation === "+") {
+          console.log("сложить");
+          pole.innerHTML += operation;
+          prepenanie = operation;
+        } else if (operation === "-") {
+          console.log("вычесть");
+          pole.innerHTML += operation;
+          prepenanie = operation;
+        } else if (operation === "=") {
+          console.log("равно");
+          console.log(pole.innerHTML);
+          let itog = pole.innerHTML;
+          let res = eval(itog);
+          console.log(eval(itog));
+          pole.innerHTML = res;
+        }
+      }
+    </script>
+    <script></script>
+  </body>
+</html>
