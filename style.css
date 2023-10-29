@@ -5,9 +5,9 @@
   align-items: end;
   border: 5px solid black;
   width: 280px;
-  height: 480px;
-  margin-left: 40%;
-  margin-top: 8%;
+  height: 430px;
+  margin-left: 35%;
+  margin-top: 1%;
 }
 .buttons {
   display: flex;
@@ -39,9 +39,14 @@ button {
 }
 .btn-1 {
   background-color: red;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
 }
 .btn-4 {
   background-color: red;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  padding-top: 5px;
 }
 .btn-3 {
   background-color: red;
@@ -69,6 +74,6 @@ button {
     width: 280px;
     height: 480px;
     margin-left: 11%;
-    margin-top: 15%;
+    margin-top: 19%;
   }
 }
