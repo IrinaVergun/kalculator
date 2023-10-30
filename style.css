@@ -14,6 +14,7 @@
   flex-direction: row;
   justify-content: end;
   flex-wrap: wrap;
+  /* border-color: aqua; */
 }
 
 .polls {
@@ -30,8 +31,26 @@ body {
 button {
   width: 70px;
   height: 70px;
-  font-size: 23px;
+  font-size: 30px;
   color: black;
+  appearance: auto;
+  text-rendering: "";
+  letter-spacing: 0cm;
+  word-spacing: 0cm;
+  line-height: 0cm;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: rgba(60, 55, 45, 0.438);
+  margin: 0em;
+  padding-block: 0px;
+  padding-inline: 0px;
+  border-width: 1px;
+  border-style: ridge;
+  padding-inline: 0px;
 }
 
 .btn-2 {
@@ -39,14 +58,18 @@ button {
 }
 .btn-1 {
   background-color: red;
-  font-size: 30px;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  padding-bottom: 7px;
+  /* font-family: "Times New Roman", Times, serif; */
+  text-align: center;
 }
 .btn-4 {
   background-color: red;
   font-size: 30px;
-  font-family: "Courier New", Courier, monospace;
-  padding-top: 5px;
+  padding-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  text-align: center;
 }
 .btn-3 {
   background-color: red;

@@ -38,6 +38,14 @@
       </div>
     </div>
     <script>
+      // let block = document.querySelector(".block");
+
+      // function turnToSquare() {
+      //   block.style.removeProperty("border-color");
+      // }
+      // turnToSquare();
+    </script>
+    <script>
       let prepenanie;
       function poleavvoda(operation) {
         let pole = document.querySelector(".polevivoda");
@@ -59,6 +67,9 @@
           console.log("сложить");
           pole.innerHTML += operation;
           prepenanie = operation;
+          if (prepenanie == operation) {
+            pole.innerHTML + operation;
+          }
         } else if (operation === "-") {
           console.log("вычесть");
           pole.innerHTML += operation;
