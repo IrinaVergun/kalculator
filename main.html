@@ -43,8 +43,14 @@
         let pozn = pole.innerHTML;
         let lastIndex = pozn.length - 1;
         let last = pozn[lastIndex];
+        let lengthh = pozn.length;
+        console.log(lengthh);
         console.log(last);
-
+        if ((lengthh) => "8") {
+          console.log("stooooooooooooopp");
+          pozn = pozn.substring(0, 8, pozn.length);
+          pole.innerHTML = pozn;
+        }
         if (typeof operation === "number") {
           console.log("это число");
           pole.innerHTML += operation;
