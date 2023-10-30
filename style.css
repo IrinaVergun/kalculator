@@ -14,7 +14,6 @@
   flex-direction: row;
   justify-content: end;
   flex-wrap: wrap;
-  /* border-color: aqua; */
 }
 
 .polls {
@@ -53,34 +52,18 @@ button {
   padding-inline: 0px;
 }
 
-.btn-2 {
-  background-color: red;
-}
 .btn-1 {
-  background-color: red;
   font-size: 40px;
   padding-bottom: 7px;
-  /* font-family: "Times New Roman", Times, serif; */
   text-align: center;
 }
 .btn-4 {
-  background-color: red;
   font-size: 30px;
   padding-top: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
   text-align: center;
 }
-.btn-3 {
-  background-color: red;
-}
-.btn-5 {
-  background-color: red;
-}
-.btn-6 {
-  background-color: red;
-}
-.ravno {
+.znak {
   background-color: red;
 }
 .polevivoda {

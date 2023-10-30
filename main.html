@@ -1,83 +1,74 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Калькулятор</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- весь калькулятор -->
     <div class="block">
+      <!-- мои поля -->
       <div class="polls">
+        <!-- поле вывода значения калькулятора -->
         <div class="polevivoda"></div>
       </div>
-
       <div class="buttons">
         <button onclick="poleavvoda(1)" class="b-1">1</button>
         <button onclick="poleavvoda(2)" class="b-2">2</button>
         <button onclick="poleavvoda(3)" class="b-3">3</button>
-        <button onclick="poleavvoda('+')" class="btn-2">+</button>
-
+        <button onclick="poleavvoda('+')" class="btn-2 znak">+</button>
         <button onclick="poleavvoda(4)" class="b-4">4</button>
         <button onclick="poleavvoda(5)" class="b-5">5</button>
         <button onclick="poleavvoda(6)" class="b-6">6</button>
-        <button onclick="poleavvoda('-')" class="btn-1">-</button>
-
+        <button onclick="poleavvoda('-')" class="btn-1 znak">-</button>
         <button onclick="poleavvoda(7)" class="b-7">7</button>
         <button onclick="poleavvoda(8)" class="b-8">8</button>
         <button onclick="poleavvoda(9)" class="b-9">9</button>
-        <button onclick="poleavvoda('=')" class="ravno">=</button>
-
+        <button onclick="poleavvoda('=')" class="ravno znak">=</button>
         <button onclick="poleavvoda(0)" class="b-0">0</button>
-
-        <button onclick="poleavvoda('AC')" class="btn-5">AC</button>
-        <button onclick="poleavvoda('/')" class="btn-3">/</button>
-        <button onclick="poleavvoda('*')" class="btn-4">*</button>
+        <button onclick="poleavvoda('AC')" class="btn-5 znak">AC</button>
+        <button onclick="poleavvoda('/')" class="btn-3 znak">/</button>
+        <button onclick="poleavvoda('*')" class="btn-4 znak">*</button>
       </div>
     </div>
+    <!--ща начнется главная функция которая всем рулит   -->
     <script>
       function poleavvoda(operation) {
-        let pole = document.querySelector(".polevivoda");
-        let pozn = pole.innerHTML;
-        let lastIndex = pozn.length - 1;
-        let last = pozn[lastIndex];
-        let lengthh = pozn.length;
-        console.log(lengthh);
-        console.log(last);
+        let pole = document.querySelector(".polevivoda"); //тут ищет полевывода значений
+        let pozn = pole.innerHTML; //тут пооследнее значение в поле вывода
+        let lastIndex = pozn.length - 1; // последний индекс по номеру -1 этошо последнего значения
+        let last = pozn[lastIndex]; //вроде последний символ поля вывода (например для "3+2" последний символ - "2")
+        let lengthh = pozn.length; // длинна посдеднего значения
         if ((lengthh) => "8") {
-          console.log("stooooooooooooopp");
-          pozn = pozn.substring(0, 8, pozn.length);
+          //ограничиваем до 8 символов ввоод чтобы не вылезало за калькулятор
+          pozn = pozn.substring(0, 8, pozn.length); // тут substring остовляет  8ым последнее значение черерз длинну
           pole.innerHTML = pozn;
         }
         if (typeof operation === "number") {
-          console.log("это число");
-          pole.innerHTML += operation;
+          pole.innerHTML += operation; // тут добовляю к полю операцию
         } else if (operation === "AC") {
-          console.log("удалить");
-          pole.innerHTML = "";
+          pole.innerHTML = ""; // тут добовляю к полю операцию
         } else if (operation === "=") {
-          console.log("равно");
-          console.log(pole.innerHTML);
-          let itog = pole.innerHTML;
-          let res = eval(itog);
-          console.log(eval(itog));
-          pole.innerHTML = res;
+          let itog = pole.innerHTML; //записываю итог если равно в поле
+          let res = eval(itog); // вставляю в евал итог, чтобы он вычитал или умножал, он вообще волен делать многое
+          pole.innerHTML = res; // res записываю в поле
+          //если длинна поля больше 7
+          if (pole.innerHTML.length > 7) {
+            pole.innerHTML = pole.innerHTML.substring(0, 7); // тут substring остовляет  8ым последнее значение черерз длинну
+          }
         } else {
           // +, -, /, *
-          console.log("операция");
-
           if (last === "+" || last === "-" || last === "/" || last === "*") {
+            //тут знаки если знак за знаком то переписывается новый знак
             pozn = pozn.substring(0, pozn.length - 1) + operation;
-            console.log("Поменялся?", pozn);
             pole.innerHTML = pozn;
           } else {
-            pole.innerHTML += operation;
+            pole.innerHTML += operation; //а если всё гуд то вставляется знак
           }
         }
       }
     </script>
-    <script></script>
   </body>
 </html>
