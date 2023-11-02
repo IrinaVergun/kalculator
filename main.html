@@ -15,6 +15,10 @@
         <div class="polevivoda"></div>
       </div>
       <div class="buttons">
+        <button onclick="poleavvoda('AC')" class="btn-5 znak">AC</button>
+        <button onclick="poleavvoda('<<')" class="b-ster znak"><<</button>
+        <button onclick="poleavvoda('%')" class="b-proc znak">%</button>
+        <button onclick="poleavvoda('col')" class="b-col">col</button>
         <button onclick="poleavvoda(1)" class="b-1">1</button>
         <button onclick="poleavvoda(2)" class="b-2">2</button>
         <button onclick="poleavvoda(3)" class="b-3">3</button>
@@ -28,13 +32,14 @@
         <button onclick="poleavvoda(9)" class="b-9">9</button>
         <button onclick="poleavvoda('=')" class="ravno znak">=</button>
         <button onclick="poleavvoda(0)" class="b-0">0</button>
-        <button onclick="poleavvoda('AC')" class="btn-5 znak">AC</button>
+        <button onclick="poleavvoda('.')" class="b-toh znak">.</button>
         <button onclick="poleavvoda('/')" class="btn-3 znak">/</button>
         <button onclick="poleavvoda('*')" class="btn-4 znak">*</button>
       </div>
     </div>
     <!--ща начнется главная функция которая всем рулит   -->
     <script>
+      let znak = document.querySelectorAll(".znak");
       function poleavvoda(operation) {
         let pole = document.querySelector(".polevivoda"); //тут ищет полевывода значений
         let pozn = pole.innerHTML; //тут пооследнее значение в поле вывода
@@ -50,6 +55,16 @@
           pole.innerHTML += operation; // тут добовляю к полю операцию
         } else if (operation === "AC") {
           pole.innerHTML = ""; // тут добовляю к полю операцию
+        } else if (operation === "<<") {
+          pole.textContent = pole.textContent.substring(
+            0,
+            pole.textContent.length - 1
+          );
+        } else if (operation === "col") {
+          znak.forEach((one) => {
+            one.style.backgroundColor = "blue";
+            //доделать
+          });
         } else if (operation === "=") {
           let itog = pole.innerHTML; //записываю итог если равно в поле
           let res = eval(itog); // вставляю в евал итог, чтобы он вычитал или умножал, он вообще волен делать многое
