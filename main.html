@@ -60,10 +60,17 @@
             0,
             pole.textContent.length - 1
           );
+        } else if (operation === "%") {
+          pole.innerHTML = pole.innerHTML / 100;
+
+          if (pole.innerHTML.length > 8) {
+            pole.innerHTML = pole.innerHTML.substring(0, 8); // тут substring остовляет  8ым последнее значение черерз длинну
+          }
         } else if (operation === "col") {
           znak.forEach((one) => {
             one.style.backgroundColor = "blue";
-            //доделать
+
+            // this.className = this.className == "" ? "blue" : "red";
           });
         } else if (operation === "=") {
           let itog = pole.innerHTML; //записываю итог если равно в поле
