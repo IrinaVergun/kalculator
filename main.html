@@ -68,9 +68,8 @@
           }
         } else if (operation === "col") {
           znak.forEach((one) => {
-            one.style.backgroundColor = "blue";
-
-            // this.className = this.className == "" ? "blue" : "red";
+            one.style.backgroundColor =
+              one.style.backgroundColor == "red" ? "blue" : "red";
           });
         } else if (operation === "=") {
           let itog = pole.innerHTML; //записываю итог если равно в поле
